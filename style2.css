@@ -1,0 +1,249 @@
+body {
+  background: linear-gradient(to bottom, #E5FFFE, #1F4C61);
+  color: rgb(1, 48, 80);
+  margin: 0;
+  min-height: 100vh;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva;
+}
+
+#myThreeJsCanvas {
+  width: 100%;
+  max-width: 1000px;
+  max-height: 500px;
+  margin: 0 auto 20px;
+  border: 5px solid rgb(0, 56, 66);
+  z-index: 1;
+}
+
+.app-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+
+
+footer {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  color: #fff;
+  background-color: #023042; /* Adiciona cor de fundo ao footer */
+  row-gap: 10px;
+  margin-top: auto; /* Isso faz o footer ser "empurrado" para o final da página */
+}
+
+
+
+
+footer button {
+  border-radius: 30px;
+  border-style: none;
+  background-color: #fff;
+}
+
+.redes_sociais {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  column-gap: 20px;
+}
+
+#icon {
+  color: #000000;
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+}
+
+.text_footer {
+  color: #000000;
+  text-decoration: none;
+}
+
+.links_footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  background: #023042;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+  border-radius: 30px;
+}
+
+.logo-link {
+  flex-shrink: 0;
+}
+
+.button {
+  font-size: 16px;
+  color: #098dad;
+  border: 1px double #098dad;
+  border-radius: 15px;
+  cursor: pointer;
+  padding: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 5px;
+}
+
+.disabled {
+  background-color: #098dad; /* Cor de fundo cinza */
+  color: #d6f3ff; /* Cor do texto cinza */
+  border: 1px solid #81e6ff;
+  cursor: not-allowed;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  width: 400px;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  padding: 20px;
+  z-index: 1000;
+}
+
+.modal2 {
+  display: none;
+  position: fixed;
+  width: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 200%);
+  padding: 20px;
+  z-index: 1000;
+}
+
+
+.modal-content {
+  background-color: #fefefe;
+  padding: 10px;
+  border: 2px solid #4f9cbb;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.close {
+  display: none;
+}
+
+
+.denaturation-message,
+.collision-message {
+  font-size: 15px;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: #fff;
+  margin: 10px;
+}
+
+.denaturation-message {
+  color: rgb(2, 101, 131);
+  border: 2px solid rgb(2, 101, 131);
+}
+
+.collision-message {
+  color: rgb(189, 0, 0);
+  border: 2px solid rgb(241, 0, 0);
+}
+
+.organelle-info {
+  font-size: 15px;
+  padding: 3px;
+  border-radius: 5px;
+  background-color: #fff;
+  color: rgb(2, 101, 131);
+  border: 2px solid rgb(2, 101, 131);
+  margin: 5px;
+}
+/* Modal que será exibido desde o início */
+.modal {
+  display: block; /* Exibe o modal imediatamente */
+  position: fixed;
+  width: 400px;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  padding: 20px;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  padding: 10px;
+  border: 2px solid #4f9cbb;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* Estilos para as mensagens */
+.denaturation-message,
+.collision-message {
+  font-size: 15px;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: #fff;
+  margin: 10px;
+}
+
+.denaturation-message {
+  color: rgb(2, 101, 131);
+  border: 2px solid rgb(2, 101, 131);
+}
+
+.collision-message {
+  color: rgb(189, 0, 0);
+  border: 2px solid rgb(241, 0, 0);
+}
+
+/* Estilo para o label exibindo pH e Temperatura */
+#ph-temperature-label {
+  margin-left: 10px;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fefefe;
+  color: rgb(2, 101, 131);
+  border: 2px solid rgb(2, 101, 131);
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Modal de segunda interação */
+.modal2 {
+  display: none;
+  position: fixed;
+  width: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 200%);
+  padding: 20px;
+  z-index: 1000;
+}
+
