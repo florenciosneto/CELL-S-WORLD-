@@ -16,50 +16,27 @@ Após clonar o repositório, é necessário instalar as dependências do projeto
 
 ### Configuração das modelagens
 
-1. Localize a constante `models` no arquivo `src/App.jsx` e insira a sua modelagem no seguinte formato:
+1. Localize a constante `models` no arquivo `src/App.jsx` e insira a sua modelagem no formato de glb ou gltf:
 
     ```javascript
     const models = [
         {
-            path: './assets/models/nomedoarquivo.glb ou .gltf',
-            position: new THREE.Vector3(x, y, z),
-            scale: new THREE.Vector3(x, y, z),
+            path: './assets/models/complexoGolgi_V1.glb',
+            position: new THREE.Vector3(0, -20, 0),
+            scale: new THREE.Vector3(10, 10, 10),
         },
-        // Adicione mais modelagens aqui
+            path: './assets/models/Modelagem.glb',
+            position: new THREE.Vector3(12, -43, 0),
+            scale: new THREE.Vector3(10, 32, 10),
+    
     ];
     ```
 
-2. Adicione a função `toggleVisibility` no mesmo arquivo. Ela será usada para alternar a visibilidade de cada modelagem:
+2. Após isso adicione mais um botão na `div app-container` para a sua modelagem ficar visivel :
 
     ```javascript
-    const toggleVisibility = (index) => {
-        // Lógica para alternar visibilidade da modelagem no índice fornecido
-        console.log(`Alternando visibilidade da modelagem ${index}`);
-    };
-    ```
-
-3. Adicione um botão correspondente para cada modelagem no retorno do componente, utilizando o modelo abaixo:
-
-    ```javascript
-    return (
-        <div>
-            <h1>Cell's World - O Micromundo Celular</h1>
-            <div>
-                {models.map((model, index) => (
-                    <strong key={index}>
-                        <button 
-                            className="button" 
-                            onClick={() => toggleVisibility(index)}>
-                            Modelagem {index + 1}
-                        </button>
-                    </strong>
-                ))}
-            </div>
-            <div id="canvas">
-                {/* Componente de renderização das modelagens */}
-            </div>
-        </div>
-    );
+        <strong><button className="button" onClick={() => toggleVisibility(0)}>Complexo de Golgi</button></strong>
+        <strong><button className="button" onClick={() => toggleVisibility(1)}>Modelagem</button></strong>
     ```
 
 Certifique-se de ajustar os índices e os nomes das modelagens conforme necessário.
