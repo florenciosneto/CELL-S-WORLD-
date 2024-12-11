@@ -2,7 +2,7 @@
 
 Repositório oficial do projeto **Cell's World**, desenvolvido como parte da Prática Profissional dos alunos do IFRN Campus Caicó.
 
-## Equipe
+## Alunos
 - **Flaubert Cauê Dantas**  
 - **Jainne Beatriz de Araújo Silva**  
 - **Paulino Alexandre da Silva Bisneto**  
