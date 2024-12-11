@@ -41,17 +41,17 @@ Após clonar o repositório, é necessário instalar as dependências do projeto
 
 Certifique-se de ajustar os índices e os nomes das modelagens conforme necessário.
 
+### Drive
+Devido às limitações do GitHub para hospedar arquivos de modelagem, disponibilizamos um link para nosso Google Drive contendo todas as modelagens do projeto.  
+[Drive com as modelagens](https://drive.google.com/drive/folders/1tNqPm9_AdeHLthgLYem9xtRRmJWSSkEs?usp=sharing)
+
+Sinta-se à vontade para adicionar novas modelagens ao projeto.
+
 ### Adicionando novas modelagens
 
 1. Após realizar o download das modelagens do Google Drive, copie os arquivos para a pasta `models`, localizada no diretório `assets` (`CELL-S-WORLD/assets/models`).
 
 2. Atualize a constante `models` no arquivo `src/App.jsx` com os detalhes da nova modelagem, seguindo o formato descrito acima.
-
-## Drive
-Devido às limitações do GitHub para hospedar arquivos de modelagem, disponibilizamos um link para nosso Google Drive contendo todas as modelagens do projeto.  
-[Drive com as modelagens](https://drive.google.com/drive/folders/1tNqPm9_AdeHLthgLYem9xtRRmJWSSkEs?usp=sharing)
-
-Sinta-se à vontade para adicionar novas modelagens ao projeto.
 
 ## Considerações finais
 Agradecemos pelo interesse em nosso trabalho!
