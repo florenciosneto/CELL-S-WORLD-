@@ -13,9 +13,9 @@ function Task() {
   const [selectedPart, setSelectedPart] = useState(null);
   const [partInfo, setPartInfo] = useState('');
   const sceneInitRef = useRef(null);
-  const [ph, setPh] = useState(7); // pH inicial
-  const [temperature, setTemperature] = useState(30); // Temperatura inicial
-  const [exibir, setExibir] = useState('ph'); // Estado para alternar entre pH e Temperatura
+  const [ph, setPh] = useState(7); 
+  const [temperature, setTemperature] = useState(30);
+  const [exibir, setExibir] = useState('ph'); 
   const animationDurationRef = useRef(0);
   const raycaster = new THREE.Raycaster();
   const cameraDirection = new THREE.Vector3();
@@ -132,22 +132,21 @@ function Task() {
   
     const animateModels = () => {
       requestAnimationFrame(animateModels);
-      let delta = test.clock.getDelta(); // Tempo entre quadros
+      let delta = test.clock.getDelta(); 
   
       if (isAnimating) {
-        // Acelera ou desacelera dependendo de uma variável ou fator (ex: progress)
-        const speedFactor = 5; // Ajuste a velocidade com este fator
+        const speedFactor = 5;
         delta *= speedFactor;
   
         mixers.forEach((mixer) => {
-          mixer.update(delta); // Atualiza a animação com o novo delta
+          mixer.update(delta); 
         });
   
         const currentTime = mixers.length > 0 ? mixers[0].time % animationDurationRef.current : 0;
         const progress = currentTime / animationDurationRef.current;
   
-        setPh(7 - (5 * progress)); // pH vai de 7 a 2
-        setTemperature(30 + (12 * progress)); // Temperatura vai de 37°C a 100°C
+        setPh(7 - (5 * progress)); 
+        setTemperature(30 + (12 * progress)); 
   
         if (loadedModels.length > 0) {
           const proteinModel = loadedModels[0];
@@ -158,19 +157,17 @@ function Task() {
             changeModelColorGradually(node, startColorB, endColorB, progress);
           });
         }
-  
-        // Exibir mensagem de desnaturação 5 segundos antes do fim
+
         if (animationDurationRef.current - currentTime <= 10) {
           setShowDenaturationMessage(true);
           window.location.reload()
         } else {
           setShowDenaturationMessage(false);
         }
-  
-        // Reiniciar a animação se ela acabou
+
         if (currentTime < delta) {
           mixers.forEach((mixer) => {
-            mixer.time = 0; // Reiniciar o tempo do mixer
+            mixer.time = 0; 
             
           });
         }
@@ -219,9 +216,9 @@ function Task() {
       const newIsAnimating = !prev;
       mixers.forEach((mixer) => {
         if (newIsAnimating) {
-          mixer.timeScale = 2; // Restabelece o tempo normal
+          mixer.timeScale = 2; 
         } else {
-          mixer.timeScale = 0; // Pausa a animação
+          mixer.timeScale = 0; 
         }
       });
       return newIsAnimating;

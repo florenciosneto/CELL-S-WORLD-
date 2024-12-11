@@ -169,8 +169,6 @@ function App() {
       if (intersects.length > 0 && intersects[0].distance < 5) {
         test.camera.position.addScaledVector(cameraDirection, -100);
         setShowCollisionMessage(true);
-
-        // Adiciona um temporizador para ocultar o modal de colisão após 3 segundos
         setTimeout(() => {
           setShowCollisionMessage(false);
         }, 3000);
@@ -202,12 +200,8 @@ function App() {
   useEffect(() => {
     const collisionModal = document.getElementById("collisionModal");
     const organelleModal = document.getElementById("organelleModal");
-  
-    // Controla a exibição dos modais
     collisionModal.style.display = showCollisionMessage ? "block" : "none";
     organelleModal.style.display = showOrganelleModal ? "block" : "none";
-    
-    // Controla a classe modal-open no body
     document.body.classList.toggle('modal-open', showCollisionMessage || showOrganelleModal);
   }, [showCollisionMessage, showOrganelleModal]);
 
@@ -273,18 +267,12 @@ function App() {
         <strong><button className="button" onClick={() => toggleVisibility(7)}>Núcleo</button></strong>
         
   
-        {/* Canvas */}
-        
         <canvas id="myThreeJsCanvas" />
-
-        {/* Modal de colisão */}
         <div id="collisionModal" className="modal" ref={collisionModalRef} style={{ display: showCollisionMessage ? 'block' : 'none' }}>
           <div className="modal-content">
             <p>Colisão detectada!</p>
           </div>
         </div>
-  
-        {/* Modal de organela */}
         <div id="organelleModal" className="modal" ref={organelleModalRef} style={{ display: showOrganelleModal ? 'block' : 'none' }}>
           <div className="modal-content">
             <span className="close" onClick={() => setShowOrganelleModal(false)}>&times;</span>
